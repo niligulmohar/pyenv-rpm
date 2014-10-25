@@ -1,5 +1,5 @@
 Name: pyenv-virtualenv
-Version: 20140705
+Version: 20141012
 Release: 1%{?dist}
 BuildArch: noarch
 Summary: A pyenv plugin to manage virtualenv environments

@@ -1,5 +1,5 @@
 Name: pyenv
-Version: 20140705
+Version: 20141012
 Release: 1%{?dist}
 BuildArch: noarch
 Summary: A simple Python version manager
@@ -40,6 +40,20 @@ mkdir -p ${PLUGIN_DIR}
 cp -r plugins/python-build/bin ${PLUGIN_DIR}
 cp -r plugins/python-build/share ${PLUGIN_DIR}
 
+mkdir -p %{buildroot}/usr/share/bash-completion/completions
+cp completions/pyenv.bash %{buildroot}/usr/share/bash-completion/completions/pyenv
+
+mkdir -p %{buildroot}/usr/share/zsh/site-functions
+cat > %{buildroot}/usr/share/zsh/site-functions/_pyenv <<EOF
+#compdef pyenv
+_arguments \\
+    ': :compadd \$(pyenv commands)' \\
+    "*: :compadd -- \$(pyenv completions \$words[2,-2] 2>/dev/null)"
+EOF
+
+mkdir -p %{buildroot}/usr/share/fish/completions
+cp completions/pyenv.fish %{buildroot}/usr/share/fish/completions/pyenv.fish
+
 %files
 %doc CHANGELOG.md
 %doc COMMANDS.md
@@ -48,6 +62,9 @@ cp -r plugins/python-build/share ${PLUGIN_DIR}
 /usr/bin/*
 /usr/libexec/*
 %dir /usr/share/pyenv/plugins
+/usr/share/bash-completion/completions/pyenv
+/usr/share/zsh/site-functions/_pyenv
+/usr/share/fish/completions/pyenv.fish
 
 %package python-build
 Summary: A pyenv plugin for installing Python versions
