@@ -1,6 +1,6 @@
-From df31d7c0b0c902697b3d21a72d8fbe3e2837101e Mon Sep 17 00:00:00 2001
+From 9caa2bbb38ec6f7a07eca2110fd647db75f4c321 Mon Sep 17 00:00:00 2001
 From: Nicklas Lindgren <nili@gulmohar.se>
-Date: Sat, 16 Aug 2014 21:50:49 +0200
+Date: Sun, 28 Dec 2014 16:28:31 +0100
 Subject: [PATCH] Include /usr/share/pyenv in plugin search path
 
 ---
@@ -8,16 +8,16 @@ Subject: [PATCH] Include /usr/share/pyenv in plugin search path
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/libexec/pyenv b/libexec/pyenv
-index e294f63..76aaa8a 100755
+index 9dd464a..d62daa9 100755
 --- a/libexec/pyenv
 +++ b/libexec/pyenv
-@@ -61,7 +61,7 @@ export PYENV_DIR
+@@ -70,7 +70,7 @@ export PYENV_DIR
  shopt -s nullglob
  
  bin_path="$(abs_dirname "$0")"
 -for plugin_bin in "${PYENV_ROOT}/plugins/"*/bin; do
 +for plugin_bin in "${PYENV_ROOT}/plugins/"*/bin /usr/share/pyenv/plugins/*/bin; do
-   bin_path="${bin_path}:${plugin_bin}"
+   PATH="${plugin_bin}:${PATH}"
  done
  export PATH="${bin_path}:${PATH}"
 -- 

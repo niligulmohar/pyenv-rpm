@@ -1,5 +1,5 @@
 Name: pyenv
-Version: 20141012
+Version: 20141211
 Release: 1%{?dist}
 BuildArch: noarch
 Summary: A simple Python version manager
