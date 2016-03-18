@@ -1,5 +1,5 @@
 Name: pyenv
-Version: 20141211
+Version: 20160310
 Release: 1%{?dist}
 BuildArch: noarch
 Summary: A simple Python version manager
@@ -7,8 +7,7 @@ License: MIT
 URL: https://github.com/yyuu/%{name}
 Requires: bash
 
-# URL: https://github.com/yyuu/%{name}/archive/v%{version}.tar.gz
-Source0: %{name}-%{version}.tar.gz
+Source0: https://github.com/yyuu/%{name}/archive/v%{version}.tar.gz
 Patch0: 0001-Include-usr-share-pyenv-in-plugin-search-path.patch
 
 %description
@@ -33,7 +32,6 @@ done
 BIN_DIR=%{buildroot}/usr/bin
 mkdir -p ${BIN_DIR}
 cp -P bin/pyenv ${BIN_DIR}
-install bin/python-local-exec %{buildroot}/usr/bin
 
 PLUGIN_DIR=%{buildroot}/usr/share/pyenv/plugins/python-build
 mkdir -p ${PLUGIN_DIR}
