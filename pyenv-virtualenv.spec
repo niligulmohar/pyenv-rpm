@@ -1,14 +1,14 @@
 Name: pyenv-virtualenv
-Version: 1.0.0
+Version: 1.1.0
 Release: 1%{?dist}
 BuildArch: noarch
 Summary: A pyenv plugin to manage virtualenv environments
 License: MIT
-URL: https://github.com/yyuu/%{name}
-Requires: pyenv >= 1.0.0
+URL: https://github.com/pyenv/%{name}
+Requires: pyenv >= 1.1.2
 Requires: bash
 
-Source0: https://github.com/yyuu/%{name}/archive/v%{version}.tar.gz
+Source0: https://github.com/pyenv/%{name}/archive/v%{version}.tar.gz
 
 %description
 

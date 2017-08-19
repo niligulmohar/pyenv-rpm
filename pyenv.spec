@@ -1,13 +1,13 @@
 Name: pyenv
-Version: 1.0.6
+Version: 1.1.3
 Release: 1%{?dist}
 BuildArch: noarch
 Summary: A simple Python version manager
 License: MIT
-URL: https://github.com/yyuu/%{name}
+URL: https://github.com/pyenv/%{name}
 Requires: bash
 
-Source0: https://github.com/yyuu/%{name}/archive/v%{version}.tar.gz
+Source0: https://github.com/pyenv/%{name}/archive/v%{version}.tar.gz
 Patch0: 0001-Include-usr-share-pyenv-in-plugin-search-path.patch
 
 %description
