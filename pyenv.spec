@@ -1,5 +1,5 @@
 Name: pyenv
-Version: 1.1.3
+Version: 1.2.8
 Release: 1%{?dist}
 BuildArch: noarch
 Summary: A simple Python version manager
