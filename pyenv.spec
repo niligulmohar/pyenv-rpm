@@ -8,7 +8,7 @@ URL: https://github.com/pyenv/%{name}
 Requires: bash
 Recommends: pyenv-python-build, pyenv-virtualenv
 
-Source0: https://github.com/pyenv/%{name}/archive/v%{version}.tar.gz
+Source0: https://github.com/pyenv/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
 Patch0: 0001-Include-usr-share-pyenv-in-plugin-search-path.patch
 
 %description
