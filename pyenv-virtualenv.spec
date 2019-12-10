@@ -13,7 +13,7 @@ Source0: https://github.com/pyenv/%{name}/archive/v%{version}/%{name}-%{version}
 %description
 
 The pyenv-virtualenv plugin for pyenv provides a `pyenv virtualenv`
-command to create pyenv-compataible virtualenv environments for Python
+command to create pyenv-compatible virtualenv environments for Python
 on UNIX-like systems.
 
 %prep
