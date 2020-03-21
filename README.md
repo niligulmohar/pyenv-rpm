@@ -1,4 +1,4 @@
-# RPM packaging for [pyenv](https://github.com/yyuu/pyenv)
+# RPM packaging for [pyenv](https://github.com/pyenv/pyenv)
 
 This project provides RPM specs that builds these packages:
 - pyenv
