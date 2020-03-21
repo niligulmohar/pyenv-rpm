@@ -1,6 +1,6 @@
 Name: pyenv
 Version: 1.2.17
-Release: 1%{?dist}
+Release: 2%{?dist}
 BuildArch: noarch
 Summary: A simple Python version manager
 License: MIT
@@ -75,6 +75,7 @@ Requires: zlib-devel
 Requires: bzip2-devel
 Requires: openssl-devel
 Requires: sqlite-devel
+Requires: make
 
 %description python-build
 The python-build plugin for pyenv provides a `pyenv install` command
