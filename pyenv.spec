@@ -76,6 +76,9 @@ Requires: bzip2-devel
 Requires: openssl-devel
 Requires: sqlite-devel
 Requires: make
+# Additional requirements for building jython
+Suggests: java-11-openjdk-devel
+Suggests: ant
 
 %description python-build
 The python-build plugin for pyenv provides a `pyenv install` command
