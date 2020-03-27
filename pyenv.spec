@@ -1,6 +1,6 @@
 Name: pyenv
 Version: 1.2.17
-Release: 2%{?dist}
+Release: 3%{?dist}
 BuildArch: noarch
 Summary: A simple Python version manager
 License: MIT
@@ -70,6 +70,7 @@ Summary: A pyenv plugin for installing Python versions
 Requires: %{name} = %{version}-%{release}
 Requires: bash
 Requires: gcc-c++
+Requires: libffi-devel
 Requires: readline-devel
 Requires: zlib-devel
 Requires: bzip2-devel
