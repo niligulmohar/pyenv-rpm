@@ -1,6 +1,6 @@
 Name: pyenv
-Version: 1.2.17
-Release: 3%{?dist}
+Version: 1.2.18
+Release: 1%{?dist}
 BuildArch: noarch
 Summary: A simple Python version manager
 License: MIT
