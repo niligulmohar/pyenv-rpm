@@ -1,6 +1,6 @@
 Name: pyenv
 Version: 1.2.18
-Release: 1%{?dist}
+Release: 2%{?dist}
 BuildArch: noarch
 Summary: A simple Python version manager
 License: MIT
@@ -77,6 +77,8 @@ Requires: bzip2-devel
 Requires: openssl-devel
 Requires: sqlite-devel
 Requires: make
+Requires: tar
+Requires: findutils
 # Additional requirements for building jython
 Suggests: java-11-openjdk-devel
 Suggests: ant
